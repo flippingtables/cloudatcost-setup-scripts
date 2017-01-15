@@ -100,8 +100,8 @@ if [ ! -f .kernel_remove_ready ]; then
 	adduser $new_account sudo
 
 
-	echo 'export LC_TYPE="en_US.UTF-8"\n' >> /home/$new_account/.bashrc
-	echo 'export LC_ALL="en_US.UTF-8"\n' >> /home/$new_account/.bashrc
+	echo 'export LC_TYPE="en_US.UTF-8"' >> /home/$new_account/.bashrc
+	echo 'export LC_ALL="en_US.UTF-8"' >> /home/$new_account/.bashrc
 
 	echo
 	echo "=========================================="
