@@ -99,6 +99,10 @@ if [ ! -f .kernel_remove_ready ]; then
 	echo "$new_account:$new_account_password" | chpasswd
 	adduser $new_account sudo
 
+
+	echo 'export LC_TYPE="en_US.UTF-8"\n' >> /home/$new_account/.bashrc
+	echo 'export LC_ALL="en_US.UTF-8"\n' >> /home/$new_account/.bashrc
+
 	echo
 	echo "=========================================="
 	echo "upgrading to latest version before doing a release upgrade..."
